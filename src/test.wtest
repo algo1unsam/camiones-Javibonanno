@@ -7,7 +7,7 @@ test"El camion puede cargar a bumblebee" {
 	assert.that(camion.puedoCargar(bumblebee))
 }
 
-test"la motoneta puede cargar paquete de ladrillos" {
+test"La motoneta puede cargar paquete de ladrillos" {
 	paqueteLadrillos.cantidadLadrillos(500)
 	assert.that(camion.puedoCargar(paqueteLadrillos))
 }
