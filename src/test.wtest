@@ -12,6 +12,7 @@ test"La motoneta puede cargar paquete de ladrillos" {
 	assert.that(camion.puedoCargar(paqueteLadrillos))
 }
 
+
 test"La carga mas peligrosa es bumblebee" {
 	camion.cargarleCargas(bumblebee)
 	camion.cargarleCargas(knightrider)
