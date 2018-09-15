@@ -1,0 +1,21 @@
+import transportes.*
+import cosasATransportar.*
+import deposito.*
+
+test"El camion puede cargar a bumblebee" {
+	bumblebee.peso(900)
+	assert.that(camion.puedoCargar(bumblebee))
+}
+
+test"la motoneta puede cargar paquete de ladrillos" {
+	paqueteLadrillos.cantidadLadrillos(500)
+	assert.that(camion.puedoCargar(paqueteLadrillos))
+}
+
+test"La carga mas peligrosa es bumblebee" {
+	camion.cargarleCargas(bumblebee)
+	camion.cargarleCargas(knightrider)
+	bumblebee.estaTransformadoEn(auto)
+	assert.that([ bumblebee ].contains(camion.cosaMasPeligrosa()))
+}
+
