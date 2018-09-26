@@ -4,6 +4,8 @@ object deposito {
 
 	var deposito = []
 
+	// TODO el nombre del método es "recibirCosas", sin embardo, sólo recibe una sóla cosa por parámetro
+	// efectivamente acá debería recibir una lista
 	method recibirCosas(unaCosa) {
 		deposito.addAll(unaCosa)
 	}
@@ -14,13 +16,16 @@ object deposito {
 
 	method llenarCamion() {
 		deposito.forEach({ unaCosa =>
+			// TODO está bien el mensaje, pero el nombre es confuso
 			camion.cargarleCargas(unaCosa)
+			// TODO idem el nombre
 			self.sacarCosas(unaCosa)
 		})
 	}
 
 }
 
+// TODO por qué esto no está en "cosasATransportar"?
 object contenedorPortuario {
 
 	var cargas = []
@@ -49,6 +54,9 @@ object contenedorPortuario {
 }
 
 object embalajeSeguridad {
+
+	// TODO acá "la cosa" embalada debería ser un atributo, sino ambos mensajes
+	// podrían responder diferente según el parámetro, y se supone que debe ser consistente	
 
 	method peso(unaCosa) {
 		return unaCosa.peso()
